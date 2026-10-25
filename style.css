@@ -1,0 +1,130 @@
+```css
+/* Import a stylish font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff1f5, #f3e8ff, #e0f2fe);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
+    color: #382b45;
+}
+
+/* Main heading */
+h1 {
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+    font-weight: 800;
+    text-align: center;
+    color: #7c3aed;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+h1::before {
+    content: "🐱 ";
+}
+
+/* Main button */
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    border: none;
+    border-radius: 14px;
+    padding: 14px 28px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(168, 85, 247, 0.35);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+button:focus-visible {
+    outline: 3px solid #7c3aed;
+    outline-offset: 4px;
+}
+
+/* Fact display card */
+#result {
+    width: min(90vw, 520px);
+    min-height: 100px;
+    margin-top: 28px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(88, 65, 110, 0.10);
+    color: #51415f;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Cat image */
+
+#show {
+    display: block;
+    width: min(90vw, 380px);
+    height: 280px;
+    object-fit: contain;
+    object-position: center;
+    margin-top: 25px;
+    border-radius: 22px;
+    border: 5px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 15px 35px rgba(88, 65, 110, 0.18);
+    background: rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+
+#show:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    body {
+        padding: 25px 14px;
+    }
+
+    h1 {
+        margin-bottom: 22px;
+    }
+
+    #result {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    #show {
+        height: 230px;
+    }
+
+    button {
+        padding: 12px 22px;
+    }
+}
+```
